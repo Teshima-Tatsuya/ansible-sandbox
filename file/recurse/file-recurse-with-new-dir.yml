@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: mkdir recurse with new dir
+      file:
+        path: ./d1/d2/d3/d4
+        mode: 0755
+        recurse: true
+        state: directory
